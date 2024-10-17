@@ -1,0 +1,15 @@
+# Redis Setup Instructions
+ # Redis Setup and Installation
+ 1. Install Redis on your local machine:
+   - For macOS: `brew install redis`
+   - For Ubuntu: `sudo apt update && sudo apt install redis`
+   - For Windows: Use the Redis installer from https://redis.io/download
+ 2. Start the Redis server:
+   ```
+   redis-server
+   ```
+ 3. Ensure your backend server connects to Redis properly.
+ 4. You can monitor Redis messages using the Redis CLI:
+   ```
+   redis-cli
+   subscribe draw
