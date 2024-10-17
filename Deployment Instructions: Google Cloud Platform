@@ -1,1 +1,14 @@
 # Deployment Instructions: Google Cloud Platform
+ # Deployment on Google Cloud Platform (GCP)
+ 1. Create a new project on GCP and enable Cloud Run and Redis Cloud Memorystore.
+ 2. Install the Google Cloud SDK: https://cloud.google.com/sdk/docs/install
+ 3. Authenticate with your GCP account: `gcloud auth login`
+ 4. Deploy the backend to Cloud Run:
+   ```
+   gcloud run deploy syncspace-backend --source . --platform managed --region
+ us-central1
+   ```
+ 5. Use Redis Cloud Memorystore and configure the connection URI in Cloud Run.
+ 6. Ensure the frontend communicates with the backend WebSocket server.
+ Test the deployment by opening the whiteboard in multiple tabs and drawing
+ collaboratively
